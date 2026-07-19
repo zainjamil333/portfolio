@@ -101,14 +101,31 @@ h1,h2,h3,p{margin-top:0}
 .monogram-orbit:before{inset:29px;border:1px dashed rgba(228,183,108,.25);animation:spin 28s linear infinite}
 .monogram-orbit:after{inset:72px;border:1px solid rgba(255,255,255,.075);box-shadow:0 0 55px rgba(124,201,255,.07)}
 @keyframes spin{to{transform:rotate(360deg)}}
-.monogram{position:relative;z-index:2;display:grid;place-items:center;width:59%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 28%,#202a39,#0e141e 58%,#090d14);border:1px solid rgba(255,255,255,.16);color:var(--text);font-family:var(--serif);font-size:7rem;text-shadow:0 0 35px rgba(124,201,255,.25);box-shadow:inset 0 1px rgba(255,255,255,.13),0 35px 80px rgba(0,0,0,.42)}
+.monogram{
+    position: relative;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 59%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    font-size: 0;
+    background: radial-gradient(
+        circle at 35% 28%,
+        #202a39,
+        #0e141e 58%,
+        #090d14
+    );
+}
+
 .monogram img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:center 25%;
-    border-radius:50%;
-    display:block;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: inherit;
 }
 .monogram.large{width:300px;max-width:100%;font-size:6rem;border:1px solid var(--line-strong)}
 .orbit-label{position:absolute;right:-4px;bottom:58px;z-index:3;display:grid;place-items:center;width:106px;aspect-ratio:1;border:1px solid rgba(228,183,108,.55);border-radius:50%;background:rgba(8,11,17,.88);color:var(--gold-2);font-size:.66rem;text-transform:uppercase;letter-spacing:.09em;box-shadow:0 0 40px rgba(228,183,108,.09);backdrop-filter:blur(10px)}
